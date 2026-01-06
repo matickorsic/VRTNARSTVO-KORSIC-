@@ -1,0 +1,8 @@
+{
+  "name": "Vrtnarstvo Koršič - Sodobna vrtnarija",
+  "description": "Sodobna spletna izkušnja za Vrtnarstvo Koršič s ponudbo sezonskih rastlin, storitvami urejanja okolice in AI Rastlinskim strokovnjakom za vrtnarske nasvete.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
