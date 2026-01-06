@@ -88,7 +88,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCategory }) 
           </div>
 
           {/* Hours */}
-          <div>
+          <div id="working-hours">
             <h4 className="font-bold text-lg mb-6">Delovni čas</h4>
             <ul className="space-y-3 text-sm text-soil-600">
               <li className="flex justify-between">

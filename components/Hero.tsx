@@ -10,9 +10,14 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   
   const handleScrollToContact = (e: React.MouseEvent) => {
     e.preventDefault();
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+    // Ciljamo specifičen ID za delovni čas v footerju
+    const hoursSection = document.getElementById('working-hours');
+    if (hoursSection) {
+      // block: 'center' zagotovi, da je element na sredini ekrana, ne na vrhu
+      hoursSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      // Fallback
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -47,26 +52,36 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           <div className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-semibold tracking-wider mb-6 border border-white/30 uppercase">
             Družinska tradicija od leta 1993
           </div>
-          <h1 className="text-5xl md:text-7xl font-serif font-bold leading-tight mb-6 uppercase">
+          
+          {/* Mobile Title (Smaller) & Desktop Title */}
+          <h1 className="text-4xl md:text-7xl font-serif font-bold leading-tight mb-6 uppercase">
             Dobrodošli na <br/>
             <span className="text-nature-300">vrtnariji</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-8 font-light leading-relaxed">
+
+          {/* Mobile Description (Shortened) */}
+          <p className="text-lg text-gray-200 mb-8 font-light leading-relaxed md:hidden">
+            Smo majhno družinsko podjetje z več kot 30-letno tradicijo v svetu vrtnarjenja. Nahajamo se na čudoviti lokaciji v Novi Gorici, kjer ustvarjamo zelene zgodbe...
+          </p>
+
+          {/* Desktop Description (Full) */}
+          <p className="text-xl text-gray-200 mb-8 font-light leading-relaxed hidden md:block">
             Smo majhno družinsko podjetje z več kot 30-letno tradicijo v svetu vrtnarjenja. Nahajamo se na čudoviti lokaciji v Novi Gorici (Ščedne 6), z enostavnim dostopom iz Vojkove ulice. V naši vrtnariji ponujamo bogato izbiro sezonskih rastlin, trajnic, dišavnic, okrasnih grmovnic, sobnih rastlin, zelenjave in jagodičevja. Poleg tega vam nudimo vrhunska gnojila, zemlje in lonce, ki bodo poskrbeli za vitalnost vašega vrta.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+
+          <div className="flex flex-col sm:flex-row gap-4 items-start">
             <a 
               href="#catalog" 
               onClick={handleScrollToCatalog}
-              className="bg-nature-500 hover:bg-nature-600 text-white px-8 py-4 rounded-full font-medium transition-all flex items-center justify-center gap-2 group"
+              className="bg-nature-500 hover:bg-nature-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-medium transition-all flex items-center justify-center gap-2 group"
             >
               Raziščite naše rastline
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a 
-              href="#contact"
+              href="#working-hours"
               onClick={handleScrollToContact}
-              className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-medium transition-all text-center flex items-center justify-center gap-2"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-6 py-3 md:px-8 md:py-4 rounded-full font-medium transition-all text-center flex items-center justify-center gap-2"
             >
               <Clock size={18} />
               Delovni čas

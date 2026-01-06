@@ -63,8 +63,11 @@ export const Catalog: React.FC<CatalogProps> = ({ onSelectCategory }) => {
         }
       },
       { 
-        threshold: 0.2, // Zahtevaj 20% vidnost
-        rootMargin: "-50px" // Dodaten zamik, da mora uporabnik priti globlje v sekcijo
+        // POPRAVEK: Znižan threshold na 0.01 (1%). 
+        // Na mobilnih napravah je sekcija zelo visoka. Če zahtevamo 20% vidnost,
+        // se morda nikoli ne sproži, ker je 20% sekcije višje od celotnega ekrana.
+        threshold: 0.01, 
+        rootMargin: "-50px" 
       } 
     );
 

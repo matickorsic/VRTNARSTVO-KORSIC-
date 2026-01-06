@@ -14,7 +14,7 @@ export const Features: React.FC = () => {
         }
       },
       {
-        threshold: 0.5, // Zvišan prag: Sproži se šele, ko je 50% elementa vidnega
+        threshold: 0.1, // POPRAVEK: Znižan prag iz 0.5 na 0.1 za boljšo mobilno izkušnjo
       }
     );
 
