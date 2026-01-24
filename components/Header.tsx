@@ -99,7 +99,7 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
           className="flex items-center gap-2 group"
         >
           <img 
-            src="https://vrtnarstvokorsic.si/wp-content/uploads/2016/04/logo-korsic.png" 
+            src="https://res.cloudinary.com/dbgh78brl/image/upload/v1769287031/image-removebg-preview_aqkker.png" 
             alt="Vrtnarstvo Koršič Logo" 
             className={`h-12 md:h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
               !useDarkText ? 'brightness-0 invert opacity-90 drop-shadow-md' : ''

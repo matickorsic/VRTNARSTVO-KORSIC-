@@ -6,42 +6,82 @@ export const CATEGORIES: Category[] = [
     id: 1,
     name: "Enoletnice",
     category: "Sezonsko",
-    image: "https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000&auto=format&fit=crop", 
-    description: "Bogata izbira sezonskega cvetja. Nudimo širok nabor visečih in pokončnih rastlin, primernih za sončne, senčne in polsenčne lege."
+    image: "https://res.cloudinary.com/dbgh78brl/image/upload/v1769286530/IMG_2722_t9sls6.jpg", 
+    imagePosition: "object-[center_55%]",
+    description: "Bogata izbira sezonskega cvetja. Nudimo širok nabor visečih in pokončnih rastlin, primernih za sončne, senčne in polsenčne lege.",
+    galleryImages: [
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292331/IMG_2771_lu0qws.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292351/IMG_2807_gw3os5.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292350/IMG_2794_kmqzwv.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292350/IMG_2790_qxrmuo.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292348/IMG_2786_e9qhjh.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292344/IMG_2781_mxnb7c.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292339/IMG_2784_stj5jv.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292338/IMG_2783_wwmtwu.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292337/IMG_2779_y8lauw.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292336/IMG_2774_lnwvwy.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292330/IMG_2768_l1aiag.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292327/IMG_2766_vbcevs.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292324/IMG_1247_voyanb.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292322/IMG_1252_iyvolx.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292322/IMG_1248_wmjuf8.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292321/IMG_1239_zrhemf.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292319/IMG_1243_mtltv9.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292319/IMG_1237_xc05jf.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292314/IMG_1236_r6m95u.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292313/IMG_1235_gugf9z.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292310/IMG_1233_wmnlck.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292308/IMG_1234_r8yprf.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292306/IMG_1202_u5nahm.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292306/IMG_1231_dixamy.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292306/IMG_1085_w4whu1.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292299/IMG_1084_dmtlfw.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292299/IMG_1082_cju9wm.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292296/IMG_1079_ve3ebd.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292295/IMG_1065_ofgnh1.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292295/IMG_1078_avrtlc.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292294/IMG_0846_nxdf2v.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292293/IMG_1083_xkqayk.jpg",
+      "https://res.cloudinary.com/dbgh78brl/image/upload/v1769292287/IMG_0855_qg7d9l.jpg"
+    ]
   },
   {
     id: 2,
     name: "Trajnice",
     category: "Vrt",
-    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=1000&auto=format&fit=crop", 
+    image: "https://res.cloudinary.com/dbgh78brl/image/upload/v1769287431/IMG_1087_tmn91g.jpg", 
+    imagePosition: "object-[center_45%]",
     description: "Trpežne rastline, ki se vračajo vsako leto. Pri nas najdete vse od okrasnih trav, cvetočih in plezajočih trajnic, pa vse do različnih zelišč."
   },
   {
     id: 3,
     name: "Sobne rastline",
     category: "Dom",
-    image: "https://images.unsplash.com/photo-1611735341450-74d61e66ee01?q=80&w=1000&auto=format&fit=crop", // Indoor plants
+    image: "https://res.cloudinary.com/dbgh78brl/image/upload/v1769287489/sobne-rastline_hnkotl.jpg", 
     description: "Ustvarite zeleno oazo v svojem domu. Pestra izbira listnatih in cvetočih sobnih rastlin, kaktusov ter sukulent."
   },
   {
     id: 4,
     name: "Grmičevje",
     category: "Urejanje",
-    image: "https://images.unsplash.com/photo-1662386993218-05d836376c3a?q=80&w=1000&auto=format&fit=crop", 
+    image: "https://res.cloudinary.com/dbgh78brl/image/upload/v1769288298/IMG_4446_hqpmkw.jpg", 
+    imagePosition: "object-[center_45%]",
     description: "Okrasno grmičevje za vsak vrt. Nudimo pestro izbiro sadik za oblikovanje živih mej ter raznolike samostojne okrasne grme."
   },
   {
     id: 5,
     name: "Gnojila in Substrati",
     category: "Nega & Rast",
-    image: "https://images.unsplash.com/photo-1590757731778-d0554eb45089?q=80&w=1000&auto=format&fit=crop", // Combined soil/fertilizer
+    image: "https://res.cloudinary.com/dbgh78brl/image/upload/v1769290355/IMG_2825_dyd926.jpg",
+    imagePosition: "object-[center_60%]",
     description: "Vse za zdravo rast. Visokokakovostni substrati Triplo in profesionalna gnojila Venagro za optimalno vitalnost vaših rastlin."
   },
   {
     id: 6,
     name: "Okrasni lonci",
     category: "Dodatki",
-    image: "https://images.unsplash.com/photo-1525498128493-380d1990a112?q=80&w=1000&auto=format&fit=crop", 
+    image: "https://res.cloudinary.com/dbgh78brl/image/upload/v1769288878/IMG_2824_vazlyr.jpg",
+    imagePosition: "object-[center_85%]",
     description: "Širok izbor modernih okrasnih loncev poljske znamke Form Plastic različnih oblik in barv za popestritev vašega ambienta."
   }
 ];
@@ -63,9 +103,6 @@ export const Catalog: React.FC<CatalogProps> = ({ onSelectCategory }) => {
         }
       },
       { 
-        // POPRAVEK: Znižan threshold na 0.01 (1%). 
-        // Na mobilnih napravah je sekcija zelo visoka. Če zahtevamo 20% vidnost,
-        // se morda nikoli ne sproži, ker je 20% sekcije višje od celotnega ekrana.
         threshold: 0.01, 
         rootMargin: "-50px" 
       } 
@@ -79,21 +116,18 @@ export const Catalog: React.FC<CatalogProps> = ({ onSelectCategory }) => {
   }, []);
 
   const getAnimationClass = (index: number) => {
-    // Duration podaljšan na 1500ms
     const baseClass = "transition-all duration-[1500ms] ease-out";
     
     if (isVisible) {
       return `${baseClass} opacity-100 translate-x-0 translate-y-0`;
     }
 
-    // Hidden State
     const mobileHidden = "opacity-0 translate-y-20";
     
-    // Desktop Hidden States
     let desktopHidden = "";
-    if (index % 3 === 0) desktopHidden = "md:-translate-x-24 md:translate-y-0"; // Left Col
-    else if (index % 3 === 1) desktopHidden = "md:translate-y-24 md:translate-x-0"; // Middle Col
-    else desktopHidden = "md:translate-x-24 md:translate-y-0"; // Right Col
+    if (index % 3 === 0) desktopHidden = "md:-translate-x-24 md:translate-y-0"; 
+    else if (index % 3 === 1) desktopHidden = "md:translate-y-24 md:translate-x-0"; 
+    else desktopHidden = "md:translate-x-24 md:translate-y-0"; 
 
     return `${baseClass} ${mobileHidden} ${desktopHidden}`;
   };
@@ -115,15 +149,26 @@ export const Catalog: React.FC<CatalogProps> = ({ onSelectCategory }) => {
               key={item.id} 
               onClick={() => onSelectCategory && onSelectCategory(item)}
               className={`group bg-nature-50/30 rounded-2xl overflow-hidden hover:shadow-xl border border-nature-100 flex flex-col cursor-pointer hover:-translate-y-2 ${getAnimationClass(index)}`}
-              // Povečan delay na 250ms (prej 150ms) za bolj razločen "stagger" učinek
               style={{ transitionDelay: `${index * 250}ms` }} 
             >
               <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={item.image} 
-                  alt={item.name} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
+                {item.video ? (
+                  <video 
+                    src={item.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                ) : (
+                  <img 
+                    src={item.image} 
+                    alt={item.name} 
+                    className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ${item.imagePosition || 'object-center'}`}
+                  />
+                )}
+                
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300"></div>
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-nature-800 shadow-sm">
                   {item.category}

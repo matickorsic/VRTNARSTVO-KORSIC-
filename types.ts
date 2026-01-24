@@ -21,7 +21,10 @@ export interface Category {
   name: string;
   category: string;
   image: string;
+  video?: string;
+  imagePosition?: string;
   description: string;
+  galleryImages?: string[]; // Array of image URLs for the category gallery
 }
 
 export enum MessageRole {

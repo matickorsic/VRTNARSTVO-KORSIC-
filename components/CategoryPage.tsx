@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ImageOff } from 'lucide-react';
 import { Category } from '../types';
 
 interface CategoryPageProps {
@@ -13,12 +13,16 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ category, onBack }) 
     window.scrollTo(0, 0);
   }, []);
 
-  // Generate placeholder items for the grid
-  // We don't need random heights anymore, just random shades for the green boxes
-  const galleryItems = Array.from({ length: 9 }).map((_, i) => ({
-    id: i,
-    shade: 100 + Math.floor(Math.random() * 5) * 100 // Varying shades of green
-  }));
+  const hasCustomImages = category.galleryImages && category.galleryImages.length > 0;
+
+  // Če imamo prave slike, jih uporabimo. Če ne, generiramo placeholderje.
+  const galleryItems = hasCustomImages 
+    ? category.galleryImages!.map((url, i) => ({ id: i, url, type: 'image' }))
+    : Array.from({ length: 9 }).map((_, i) => ({
+        id: i,
+        shade: 100 + Math.floor(Math.random() * 5) * 100, // Varying shades of green
+        type: 'placeholder'
+      }));
 
   return (
     <div className="bg-white min-h-screen pt-32 pb-20 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -45,30 +49,38 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ category, onBack }) 
           <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
             {category.description} 
             <br className="mb-2"/>
-            Spodaj si lahko ogledate primere iz naše trenutne zaloge.
+            Spodaj si lahko ogledate primere iz naše trenutne ponudbe.
           </p>
         </div>
 
         {/* Standard Grid Gallery (3 columns) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryItems.map((item) => (
+          {galleryItems.map((item: any) => (
             <div 
               key={item.id}
-              className="aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 relative group transform hover:-translate-y-1"
+              className="aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 relative group transform hover:-translate-y-1 bg-gray-100"
             >
-              {/* Green Placeholder */}
-              <div 
-                className={`w-full h-full bg-nature-${item.shade < 900 ? item.shade : 500} flex items-center justify-center`}
-              >
-                <div className="text-white/30 font-serif text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Foto {item.id + 1}
+              {item.type === 'image' ? (
+                <img 
+                  src={item.url} 
+                  alt={`${category.name} ${item.id + 1}`} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              ) : (
+                /* Placeholder Green Box */
+                <div 
+                  className={`w-full h-full bg-nature-${item.shade < 900 ? item.shade : 500} flex items-center justify-center`}
+                >
+                  <div className="text-white/30 font-serif text-4xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Foto {item.id + 1}
+                  </div>
                 </div>
-              </div>
+              )}
               
               {/* Overlay for realism feeling */}
-              <div className="absolute inset-0 bg-gradient-to-t from-nature-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-nature-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               
-              {/* Caption placeholder */}
+              {/* Caption */}
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                 <span className="inline-block bg-white/90 backdrop-blur-sm text-nature-900 px-4 py-2 rounded-full text-sm font-medium shadow-lg">
                   {category.name} {item.id + 1}
@@ -78,12 +90,17 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ category, onBack }) 
           ))}
         </div>
 
-        {/* Placeholder Message */}
-        <div className="mt-16 p-8 bg-nature-50 rounded-2xl text-center border border-nature-100">
-          <p className="text-nature-800 font-medium">
-            Galerija je v pripravi. Kmalu bomo dodali sveže fotografije naših {category.name.toLowerCase()}.
-          </p>
-        </div>
+        {/* Message if no images */}
+        {!hasCustomImages && (
+          <div className="mt-16 p-8 bg-nature-50 rounded-2xl text-center border border-nature-100 flex flex-col items-center gap-4">
+            <div className="p-4 bg-white rounded-full text-nature-300">
+                <ImageOff size={32} />
+            </div>
+            <p className="text-nature-800 font-medium">
+              Galerija je v pripravi. Kmalu bomo dodali sveže fotografije naših {category.name.toLowerCase()}.
+            </p>
+          </div>
+        )}
 
       </div>
     </div>

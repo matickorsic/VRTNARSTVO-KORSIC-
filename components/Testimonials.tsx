@@ -5,24 +5,24 @@ import { Star, Quote } from 'lucide-react';
 const REVIEWS = [
   {
     id: 1,
-    author: "Metka K.",
+    author: "Peter Kaiser",
     rating: 5,
-    text: "Čudovita vrtnarija z neverjetno izbiro rastlin! Osebje je izjemno prijazno in strokovno, vedno si vzamejo čas za nasvet. Moje rože letos cvetijo kot še nikoli.",
-    date: "pred 1 mesecem"
-  },
-  {
-    id: 2,
-    author: "Tomaž V.",
-    rating: 5,
-    text: "Zelo lepo urejeno, velika izbira sadik zelenjave in rož. Cene so ugodne, kvaliteta pa vrhunska. Zagotovo se še vrnem!",
+    text: "Velika in raznolika izbira lončnic. Morda celo največja na goriškem. Na voljo imajo tudi rezano cvetje, ki ga na željo tudi aranžirajo. Prodajalci so strokovni, profesionalni in ustrežljivi. Poleg cvetja prodajajo tudi nekatere druge vrtnarske artikle. Pred prodajalno imajo tudi prosto parkirišče.",
     date: "pred 2 mesecema"
   },
   {
-    id: 3,
-    author: "Ana B.",
+    id: 2,
+    author: "Bogomir Črv",
     rating: 5,
-    text: "Prijazno osebje in strokovno svetovanje. Vedno dobim vse, kar potrebujem za svoj vrt in balkon. Priporočam obisk!",
-    date: "pred 3 tedni"
+    text: "Pestra izbira vrtnin in cvetja, profesionalno osebje.",
+    date: "pred 4 leti"
+  },
+  {
+    id: 3,
+    author: "Lilijana Seljak Humar",
+    rating: 5,
+    text: "Super prodajalci in super izbira.",
+    date: "pred 4 leti"
   }
 ];
 
@@ -43,7 +43,7 @@ export const Testimonials: React.FC = () => {
             Besede naših kupcev
           </h3>
           <div className="flex justify-center items-center gap-2 mb-4">
-            <span className="font-bold text-2xl text-gray-800">4.8</span>
+            <span className="font-bold text-2xl text-gray-800">4.9</span>
             <div className="flex text-yellow-400">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={24} fill="currentColor" />
@@ -57,7 +57,7 @@ export const Testimonials: React.FC = () => {
           {REVIEWS.map((review) => (
             <div key={review.id} className="bg-white p-8 rounded-3xl shadow-sm border border-nature-100 flex flex-col h-full hover:shadow-md transition-shadow">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 rounded-full bg-nature-100 flex items-center justify-center text-nature-700 font-bold text-lg">
+                <div className="w-10 h-10 rounded-full bg-nature-100 flex items-center justify-center text-nature-700 font-bold text-lg shrink-0">
                   {review.author.charAt(0)}
                 </div>
                 <div>
