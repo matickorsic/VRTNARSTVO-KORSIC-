@@ -3,28 +3,76 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const IMAGES = [
   {
-    url: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=1000&auto=format&fit=crop",
-    title: "Naši rastlinjaki"
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769439007/IMG_6520_elwtrv.jpg",
+    title: "Sansatia"
   },
   {
-    url: "https://images.unsplash.com/photo-1611735341450-74d61e66ee01?q=80&w=1000&auto=format&fit=crop",
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769438995/IMG_6509_kfgh8g.jpg",
+    title: "Azaleja"
+  },
+  {
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769439005/IMG_6515_vxgckr.jpg",
+    title: "Levizija"
+  },
+  {
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769439007/IMG_6514_vt0ize.jpg",
+    title: "Kalanhoja"
+  },
+  {
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769438997/IMG_6517_feilbj.jpg",
+    title: "Nageljni"
+  },
+  {
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769439008/IMG_6503_ubpgn2.jpg",
+    title: "Strelitzia"
+  },
+  {
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769439006/IMG_6513_szehmi.jpg",
     title: "Sobne rastline"
   },
   {
-    url: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?q=80&w=1000&auto=format&fit=crop",
-    title: "Kaktusi in sukulente"
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769439007/IMG_6504_vghvaw.jpg",
+    title: "Bršljan"
   },
   {
-    url: "https://images.unsplash.com/photo-1525498128493-380d1990a112?q=80&w=1000&auto=format&fit=crop",
-    title: "Okrasni lonci"
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769439002/IMG_6518_fkvgf3.jpg",
+    title: "Trobentice"
   },
   {
-    url: "https://images.unsplash.com/photo-1598914842407-3773199e525a?q=80&w=1000&auto=format&fit=crop",
-    title: "Gnojila in nega"
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769439005/IMG_6507_stjyko.jpg",
+    title: "Gazanije"
   },
   {
-    url: "https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?q=80&w=1000&auto=format&fit=crop",
-    title: "Sezonsko cvetje"
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769439003/IMG_6516_wcqea6.jpg",
+    title: "Levizija"
+  },
+  {
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769438998/IMG_6511_mur5bs.jpg",
+    title: "Primula obconica"
+  },
+  {
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769439002/IMG_6521_tqdwb6.jpg",
+    title: "Mačehe"
+  },
+  {
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769439001/IMG_6519_j2ykhs.jpg",
+    title: "Trobentice"
+  },
+  {
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769438997/IMG_6522_wbcehd.jpg",
+    title: "Asparagus"
+  },
+  {
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769438997/IMG_6510_mq66t1.jpg",
+    title: "Cinerarija"
+  },
+  {
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769438997/IMG_6506_buj0pv.jpg",
+    title: "Kala"
+  },
+  {
+    url: "https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769438997/IMG_6512_bknum4.jpg",
+    title: "Sezonska ponudba"
   }
 ];
 
@@ -129,8 +177,10 @@ export const Gallery: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-nature-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     
                     {/* Content on hover */}
-                    <div className="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-                      <p className="text-white font-serif text-xl font-medium">{img.title}</p>
+                    <div className="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100 w-full">
+                      <div className="bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg inline-block">
+                        <p className="text-nature-900 font-serif text-lg font-bold">{img.title}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
