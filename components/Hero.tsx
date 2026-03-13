@@ -4,9 +4,10 @@ import { Page } from '../App';
 
 interface HeroProps {
   onNavigate: (page: Page) => void;
+  onVideoLoaded?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
+export const Hero: React.FC<HeroProps> = ({ onNavigate, onVideoLoaded }) => {
   
   const handleScrollToContact = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -39,6 +40,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           title="Video ozadje"
+          onLoad={onVideoLoaded}
         ></iframe>
         {/* Text readability overlay (Left to Right) */}
         <div className="absolute inset-0 bg-gradient-to-r from-nature-900/90 via-nature-900/40 to-transparent"></div>

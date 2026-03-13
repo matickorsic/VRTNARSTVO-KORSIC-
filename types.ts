@@ -9,6 +9,19 @@ export interface Plant {
   description: string;
 }
 
+export interface ShopProduct {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  image_url: string;
+  category: string;
+  variation?: string; // e.g. "Mala", "Velika"
+  size?: string;      // e.g. "20L", "45L" from CSV import
+  color?: string;     // e.g. "Rdeča", "Modra"
+  stock?: number;     // Zaloga
+}
+
 export interface Service {
   id: number;
   title: string;
@@ -24,7 +37,32 @@ export interface Category {
   video?: string;
   imagePosition?: string;
   description: string;
-  galleryImages?: string[]; // Array of image URLs for the category gallery
+  galleryImages?: { 
+    url: string; 
+    additionalUrls?: string[];
+    title: string; 
+    description?: string;
+    details?: {
+      plantType?: string;
+      family?: string;
+      height?: string;
+      maxHeight?: string;
+      evergreen?: boolean;
+      exposure?: string;
+      water?: string;
+      blooming?: string;
+      potSize?: string;
+      leafShape?: string;
+      leafColor?: string;
+      flowerColor?: string;
+      use?: string;
+      minTemp?: string;
+      soil?: string;
+      pruning?: string;
+      trunk?: string;
+      diameter?: string;
+    }
+  }[];
 }
 
 export enum MessageRole {
