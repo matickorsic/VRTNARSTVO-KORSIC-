@@ -6,7 +6,7 @@
 
 This contains everything you need to run your app locally.
 
-View your app in AI Studio: https://ai.studio/apps/ad6755c7-45db-4255-b91c-7f5116629835
+View your app in AI Studio: https://ai.studio/apps/drive/1YqzLBbmuOn_8VRUbYmtC_k3LkxBw4qct
 
 ## Run Locally
 
@@ -15,6 +15,10 @@ View your app in AI Studio: https://ai.studio/apps/ad6755c7-45db-4255-b91c-7f511
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+2. Set the `GEMINI_API_KEY` in `.env.local` to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Vercel
+
+Set `GEMINI_API_KEY` as an Environment Variable in your Vercel project before deploying if you want the AI plant assistant to work in production.
