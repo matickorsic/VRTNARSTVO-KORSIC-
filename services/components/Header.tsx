@@ -1,0 +1,194 @@
+import React, { useEffect, useState } from 'react';
+import { Menu, ShoppingBag, X } from 'lucide-react';
+import { Page } from '../App';
+
+interface HeaderProps {
+  onNavigate: (page: Page) => void;
+  currentPage: Page;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isDarkContent, setIsDarkContent] = useState(false);
+  const [isComingSoonModalOpen, setIsComingSoonModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+
+      if (currentPage === 'home') {
+        const triggerPoint = window.innerHeight * 1.2;
+        setIsDarkContent(window.scrollY > triggerPoint);
+      } else {
+        setIsDarkContent(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [currentPage]);
+
+  const handleNavClick = (
+    e: React.MouseEvent,
+    target: string,
+    page?: Page,
+    isComingSoon?: boolean
+  ) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+
+    if (isComingSoon) {
+      setIsComingSoonModalOpen(true);
+      return;
+    }
+
+    if (page) {
+      onNavigate(page);
+      return;
+    }
+
+    if (!target.startsWith('#')) {
+      return;
+    }
+
+    const lightPages: Page[] = ['about', 'category', 'company-details', 'terms', 'privacy-policy', 'cookies'];
+    if (lightPages.includes(currentPage) && target !== '#contact') {
+      onNavigate('home');
+      setTimeout(() => {
+        const element = document.querySelector(target);
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+      return;
+    }
+
+    const element = document.querySelector(target);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+
+    onNavigate('home');
+    setTimeout(() => {
+      const fallbackElement = document.querySelector(target);
+      fallbackElement?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
+  const navLinks = [
+    { name: 'Domov', target: '#home', page: 'home' as Page },
+    { name: 'Rastline', target: '#catalog' },
+    { name: 'Spletna trgovina', target: '#shop', isComingSoon: true },
+    { name: 'O nas', target: '#about', page: 'about' as Page },
+    { name: 'Kontakt', target: '#contact' },
+  ];
+
+  const useDarkText = isMobileMenuOpen || isDarkContent;
+
+  return (
+    <>
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+          isMobileMenuOpen
+            ? 'bg-white shadow-md py-4'
+            : isScrolled
+              ? 'bg-transparent py-3 backdrop-blur-[2px]'
+              : 'bg-transparent py-6'
+        }`}
+      >
+        <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+          <a
+            href="#home"
+            onClick={(e) => handleNavClick(e, '#home', 'home')}
+            className="flex items-center gap-2 group"
+          >
+            <img
+              src="/images/optimized/image-removebg-preview_aqkker.png"
+              decoding="async"
+              fetchPriority="high"
+              alt="Vrtnarstvo Koršič Logo"
+              className={`h-12 md:h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
+                !useDarkText ? 'brightness-0 invert opacity-90 drop-shadow-md' : ''
+              }`}
+            />
+          </a>
+
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.target}
+                onClick={(e) => handleNavClick(e, link.target, link.page, link.isComingSoon)}
+                className={`text-sm font-medium transition-colors cursor-pointer ${
+                  useDarkText
+                    ? 'text-nature-900 hover:text-nature-600'
+                    : 'text-white hover:text-nature-200 drop-shadow-md'
+                } ${link.page === currentPage && link.page !== 'home' ? 'underline underline-offset-4 decoration-2 decoration-nature-400' : ''}`}
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
+
+          <button
+            className={`md:hidden p-2 transition-colors ${
+              useDarkText ? 'text-nature-800' : 'text-white drop-shadow-md'
+            }`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 flex flex-col p-6 gap-4 animate-in slide-in-from-top-5">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.target}
+                className={`text-lg font-medium py-2 border-b border-gray-50 ${
+                  link.page === currentPage ? 'text-nature-600 font-bold' : 'text-gray-800'
+                }`}
+                onClick={(e) => handleNavClick(e, link.target, link.page, link.isComingSoon)}
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+        )}
+      </header>
+
+      {isComingSoonModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+          <div
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300"
+            onClick={() => setIsComingSoonModalOpen(false)}
+          />
+          <div className="bg-white rounded-3xl p-8 md:p-12 max-w-md w-full relative z-10 text-center shadow-2xl animate-in zoom-in-95 duration-300">
+            <button
+              onClick={() => setIsComingSoonModalOpen(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
+            >
+              <X size={24} />
+            </button>
+            <div className="w-20 h-20 bg-nature-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <ShoppingBag className="text-nature-600" size={40} />
+            </div>
+            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">Prihaja kmalu</h2>
+            <p className="text-gray-600 mb-8 text-lg">
+              Spletna trgovina je trenutno v pripravi. Kmalu bo mogoče izbrane izdelke naročiti tudi preko spleta.
+            </p>
+            <button
+              onClick={() => setIsComingSoonModalOpen(false)}
+              className="bg-nature-600 text-white px-8 py-3 rounded-full font-bold hover:bg-nature-700 transition-colors w-full"
+            >
+              Razumem
+            </button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};

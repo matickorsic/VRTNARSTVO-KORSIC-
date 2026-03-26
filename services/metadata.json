@@ -1,0 +1,8 @@
+{
+  "name": "Vrtnarstvo Koršič - Sodobna vrtnarija",
+  "description": "Sodobna spletna predstavitev Vrtnarstva Koršič s ponudbo enoletnic, trajnic, notranjih rastlin, okrasnih loncev, zemlje in gnojil.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
