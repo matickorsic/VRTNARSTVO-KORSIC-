@@ -37,6 +37,35 @@ function New-ResizedBitmap {
     return $bitmap
 }
 
+function Set-ImageOrientation {
+    param(
+        [System.Drawing.Image]$Image
+    )
+
+    $orientationId = 274
+    $orientationProperty = $Image.PropertyItems | Where-Object { $_.Id -eq $orientationId } | Select-Object -First 1
+
+    if (-not $orientationProperty) {
+        return
+    }
+
+    $orientation = [int]$orientationProperty.Value[0]
+    $rotateFlipType = [System.Drawing.RotateFlipType]::RotateNoneFlipNone
+
+    switch ($orientation) {
+        2 { $rotateFlipType = [System.Drawing.RotateFlipType]::RotateNoneFlipX }
+        3 { $rotateFlipType = [System.Drawing.RotateFlipType]::Rotate180FlipNone }
+        4 { $rotateFlipType = [System.Drawing.RotateFlipType]::Rotate180FlipX }
+        5 { $rotateFlipType = [System.Drawing.RotateFlipType]::Rotate90FlipX }
+        6 { $rotateFlipType = [System.Drawing.RotateFlipType]::Rotate90FlipNone }
+        7 { $rotateFlipType = [System.Drawing.RotateFlipType]::Rotate270FlipX }
+        8 { $rotateFlipType = [System.Drawing.RotateFlipType]::Rotate270FlipNone }
+        default { return }
+    }
+
+    $Image.RotateFlip($rotateFlipType)
+}
+
 Get-ChildItem $SourceDirectory -File | ForEach-Object {
     $sourcePath = $_.FullName
     $destinationPath = Join-Path $OutputDirectory $_.Name
@@ -45,6 +74,8 @@ Get-ChildItem $SourceDirectory -File | ForEach-Object {
     $image = [System.Drawing.Image]::FromFile($sourcePath)
 
     try {
+        Set-ImageOrientation -Image $image
+
         $widthScale = [double]$MaxDimension / [double]$image.Width
         $heightScale = [double]$MaxDimension / [double]$image.Height
         $scale = [Math]::Min(
