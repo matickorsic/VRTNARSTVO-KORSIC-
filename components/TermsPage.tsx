@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { FileText, Shield, Scale } from 'lucide-react';
 
 export const TermsPage: React.FC = () => {
@@ -35,7 +35,7 @@ export const TermsPage: React.FC = () => {
                         <p>Sedež: Ščedne 6, 5000 Nova Gorica, Slovenija</p>
                         <p>Davčna številka: SI69488576</p>
                         <p>Matična številka: 2872331000</p>
-                        <p>E-pošta: <a href="mailto:matic.korsic@vrtnarstvokorsic.si" className="text-nature-600 hover:underline">matic.korsic@vrtnarstvokorsic.si</a></p>
+                        <p>E-pošta: <a href="mailto:vrtnarstvo.korsic@siol.net" className="text-nature-600 hover:underline">vrtnarstvo.korsic@siol.net</a></p>
                         <p>Telefon: +386 53 006 059</p>
                     </div>
                     <p>
@@ -153,3 +153,4 @@ export const TermsPage: React.FC = () => {
     </div>
   );
 };
+

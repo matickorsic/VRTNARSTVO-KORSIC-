@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Local image backup folder
+public/images/cloudinary-migration/
+
+# Local env and temp exports
+.env.local
+.edge-*/
+backup_before_*/
+context/
+migrated_prompt_history/
+
+# Unused working files and print assets
+jpg_za_tisk_*/
+new_pdf_previews/
+translated_pdf_assets/
+translated_pdf_previews/
+translated_pdf_previews_2/
+preview_page_*.png
+*_ocr.txt
+segnaprezzo_*.pdf
+pacciamanti_sl_print.html
+tercomposti_short_sl_print.html

@@ -66,6 +66,8 @@ export const Testimonials: React.FC = () => {
                 </div>
                 <img 
                     src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
+                    loading="lazy"
+                    decoding="async"
                     alt="Google"
                     className="w-5 h-5 ml-auto opacity-50"
                 />
@@ -91,6 +93,8 @@ export const Testimonials: React.FC = () => {
           >
             <img 
                 src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
+                loading="lazy"
+                decoding="async"
                 alt="Google"
                 className="w-5 h-5"
             />

@@ -93,7 +93,7 @@ export const CompanyDetailsPage: React.FC = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-0.5">E-pošta</h3>
-                                    <a href="mailto:matic.korsic@vrtnarstvokorsic.si" className="text-nature-700 hover:underline font-medium">matic.korsic@vrtnarstvokorsic.si</a>
+                                    <a href="mailto:vrtnarstvo.korsic@siol.net" className="text-nature-700 hover:underline font-medium">vrtnarstvo.korsic@siol.net</a>
                                 </div>
                             </div>
                          </div>

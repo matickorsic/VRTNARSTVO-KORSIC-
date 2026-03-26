@@ -1,0 +1,9 @@
+{
+  "name": "Vrtnarstvo Koršič",
+  "short_name": "Koršič",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f2fcf5",
+  "theme_color": "#207143",
+  "icons": []
+}

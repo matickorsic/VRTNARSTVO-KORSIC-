@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+﻿import React, { useRef, useEffect, useState } from 'react';
 import { Leaf } from 'lucide-react';
 
 export const Features: React.FC = () => {
@@ -43,7 +43,9 @@ export const Features: React.FC = () => {
               {/* Main Image with Organic Shape */}
               <div className="absolute inset-4 overflow-hidden shadow-2xl shadow-nature-950/50 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] transition-transform hover:scale-[1.02] duration-700">
                 <img 
-                  src="https://res.cloudinary.com/dbgh78brl/image/upload/f_auto,q_auto/v1769291492/IMG_2693_un1s7t.jpg" 
+                  src="/images/optimized/IMG_2693_un1s7t.jpg" 
+                  loading="lazy"
+                  decoding="async"
                   alt="Vrtnarstvo Koršič Rastlinjaki" 
                   className="w-full h-full object-cover"
                 />
@@ -90,3 +92,6 @@ export const Features: React.FC = () => {
     </section>
   );
 };
+
+
+

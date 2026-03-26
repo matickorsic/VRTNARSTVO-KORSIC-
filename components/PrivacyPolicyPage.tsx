@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Shield, Lock, Eye, FileText, Database, UserCheck, Server, Cookie, Scale } from 'lucide-react';
 
 export const PrivacyPolicyPage: React.FC = () => {
@@ -40,7 +40,7 @@ export const PrivacyPolicyPage: React.FC = () => {
                             <div className="mt-2 text-sm space-y-1 text-gray-600">
                                 <p><strong>Davčna številka:</strong> SI69488576 (zavezanec za DDV)</p>
                                 <p><strong>Matična številka:</strong> 2872331000</p>
-                                <p><strong>E-pošta:</strong> <a href="mailto:matic.korsic@vrtnarstvokorsic.si" className="text-nature-600 hover:underline">matic.korsic@vrtnarstvokorsic.si</a></p>
+                                <p><strong>E-pošta:</strong> <a href="mailto:vrtnarstvo.korsic@siol.net" className="text-nature-600 hover:underline">vrtnarstvo.korsic@siol.net</a></p>
                                 <p><strong>Telefon:</strong> +386 53 006 059</p>
                             </div>
                         </div>
@@ -210,3 +210,4 @@ export const PrivacyPolicyPage: React.FC = () => {
     </div>
   );
 };
+

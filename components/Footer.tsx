@@ -82,7 +82,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectCategory }) 
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-nature-600 shrink-0" size={18} />
-                <span>matic.korsic@vrtnarstvokorsic.si</span>
+                <span>vrtnarstvo.korsic@siol.net</span>
               </li>
             </ul>
           </div>
