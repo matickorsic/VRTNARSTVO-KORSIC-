@@ -30,6 +30,7 @@ public/images/cloudinary-migration/
 .env.local
 .edge-*/
 backup_before_*/
+from-zip-3/
 context/
 migrated_prompt_history/
 

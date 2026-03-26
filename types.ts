@@ -16,6 +16,35 @@ export interface Service {
   icon: React.ReactNode;
 }
 
+export interface CategoryGalleryDetails {
+  plantType?: string;
+  family?: string;
+  height?: string;
+  maxHeight?: string;
+  evergreen?: boolean;
+  exposure?: string;
+  water?: string;
+  blooming?: string;
+  potSize?: string;
+  leafShape?: string;
+  leafColor?: string;
+  flowerColor?: string;
+  use?: string;
+  minTemp?: string;
+  soil?: string;
+  pruning?: string;
+  trunk?: string;
+  diameter?: string;
+}
+
+export interface CategoryGalleryImage {
+  url: string;
+  additionalUrls?: string[];
+  title: string;
+  description?: string;
+  details?: CategoryGalleryDetails;
+}
+
 export interface Category {
   id: number;
   name: string;
@@ -24,7 +53,7 @@ export interface Category {
   video?: string;
   imagePosition?: string;
   description: string;
-  galleryImages?: string[]; // Array of image URLs for the category gallery
+  galleryImages?: Array<string | CategoryGalleryImage>;
 }
 
 export enum MessageRole {

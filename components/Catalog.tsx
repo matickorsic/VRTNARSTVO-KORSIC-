@@ -106,7 +106,140 @@ export const CATEGORIES: Category[] = [
     category: "Urejanje",
     image: "/images/optimized/IMG_4446_hqpmkw.jpg", 
     imagePosition: "object-[center_45%]",
-    description: "Okrasno grmičevje za vsak vrt. Nudimo pestro izbiro sadik za oblikovanje živih mej ter raznolike samostojne okrasne grme."
+    description: "Okrasno grmičevje za vsak vrt. Nudimo pestro izbiro sadik za oblikovanje živih mej ter raznolike samostojne okrasne grme.",
+    galleryImages: [
+      {
+        url: "/images/optimized/IMG_7066_ewpawo.jpg",
+        title: "Forsythia intermedia 'Weekend'",
+        description: "Listopaden grm z zelo zgodnjim in obilnim rumenim cvetenjem, ki polepša vrt še pred olistanjem."
+      },
+      {
+        url: "/images/optimized/IMG_7068_beh30q.jpg",
+        title: "Juniperus horizontalis 'Wiltonii'",
+        description: "Nizek plazeč zimzelen iglavec srebrno-modre barve, odličen za pokrivanje tal, brežin in skalnjakov."
+      },
+      {
+        url: "/images/optimized/IMG_7070_ip3xai.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/hydrangea-paniculata-vanille-fraise-R---Renhy-.jpg"],
+        title: "Hydrangea paniculata 'Vanille Fraise'",
+        description: "Dekorativna hortenzija s piramidalnimi socvetji, ki iz kremno bele postopoma prehajajo v rožnate tone."
+      },
+      {
+        url: "/images/optimized/IMG_7067_y4dgpf.jpg",
+        title: "Kalistemon Laevis",
+        description: "Zimzeleni grm z značilnimi rdečimi cvetovi v obliki valjastih klasov, znan tudi kot čistilec steklenic."
+      },
+      {
+        url: "/images/optimized/IMG_7069_i20fe0.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/berberis-th.-harlequin.jpg-+-piccola.jpg"],
+        title: "Berberis Thunbergii Harlequin",
+        description: "Listopaden grm z bordo rdečimi in belo pisanimi listi, primeren za gredice, skalnjake in samostojne zasaditve."
+      },
+      {
+        url: "/images/optimized/IMG_7071_m1yrje.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/buddleja-davidii-pink-dettaglio-000236.jpg"],
+        title: "Buddleja Davidii Pink Delight",
+        description: "Metuljnik z dolgim poletnim cvetenjem in prijetnim vonjem, ki privablja metulje in druge opraševalce."
+      },
+      {
+        url: "/images/optimized/IMG_7074_vdivon.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/juniperus-hor-blue-chip.jpg-+-piccola.jpg"],
+        title: "Juniperus horizontalis Blue Chip",
+        description: "Zimzelen plazeč iglavec intenzivne srebrno-modre barve za skalnjake, sadilnike in pokrivanje tal."
+      },
+      {
+        url: "/images/optimized/IMG_7072_cifyoj.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/azalea-769531-1920.jpg"],
+        title: "Azaleja Encore Sweetheart",
+        description: "Kompaktna zimzelena azaleja z večkratnim cvetenjem v bogato rožnatih tonih skozi sezono."
+      },
+      {
+        url: "/images/optimized/IMG_7073_w6wqha.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/juniperus-procubens-nana-dettaglio-015186.jpg"],
+        title: "Juniperus Procubens Nana",
+        description: "Počasi rastoč plazeč iglavec s sivkasto-zelenim listjem, zelo primeren za skalnjake in nizke zasaditve."
+      },
+      {
+        url: "/images/optimized/IMG_7075_m17psj.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/nerium-oleander.jpg"],
+        title: "Nerium Oleander",
+        description: "Klasični oleander z dolgim cvetenjem in bujno rastjo, primeren za sončne lege in večje posode."
+      },
+      {
+        url: "/images/optimized/IMG_7076_chpvbw.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/loropetalum-chinensis-black-dettaglio-000741.jpg"],
+        title: "Loropetalum Chinensis Black Pearl",
+        description: "Zimzelen grm s temno rdečim skoraj črnim listjem in vijoličnimi cvetovi, ki močno izstopa v zasaditvah."
+      },
+      {
+        url: "/images/optimized/IMG_7077_gitdob.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/nandina-domestica-blush-pink-R---Aka-.jpg"],
+        title: "Nandina Domestica Roza Blush",
+        description: "Dekorativna nandina z rožnatimi mladimi listi, ki kasneje zelenijo in jeseni znova zažarijo v rdečih odtenkih."
+      },
+      {
+        url: "/images/optimized/IMG_7083_nibscl.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/Berberis-Frikartii-Amstelveen--dettaglio-V19-000203.jpg"],
+        title: "Berberis Frikartii Amstelveen",
+        description: "Gosto razvejan zimzelen češmin s temno zelenimi listi in rumenim spomladanskim cvetenjem."
+      },
+      {
+        url: "/images/optimized/IMG_7078_pswymx.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/cornus-alba-sibirica-dettaglio-000356.jpg"],
+        title: "Cornus Alba Sibirica Variegata",
+        description: "Listopaden kornus z belo obrobljenimi listi in izrazitimi rdečimi poganjki, ki pridejo do izraza tudi pozimi."
+      },
+      {
+        url: "/images/optimized/IMG_7080_mxg6i8.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/ilex-altaclarensis-golden-dettaglio-000550.jpg"],
+        title: "Ilex Altaclarensis Golden King",
+        description: "Zimzelena bodika s sijočimi zelenimi listi in rumenim robom, odlična za poudarke v vrtu."
+      },
+      {
+        url: "/images/optimized/IMG_7079_bkbzjq.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/viburnum-opulus-roseum-det.jpg"],
+        title: "Viburnum Opulus Roseum",
+        description: "Okrasna snežna kepa z velikimi belimi cvetnimi kroglami in močno sezonsko prisotnostjo v vrtu."
+      },
+      {
+        url: "/images/optimized/IMG_7081_wcihtj.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/osmanthus-goshiki.jpg"],
+        title: "Osmanthus Heterophyllus Goshiki",
+        description: "Kompakten zimzelen osmantus s pisanimi listi v zelenih, kremnih, rožnatih in oranžnih tonih."
+      },
+      {
+        url: "/images/optimized/IMG_7082_j41r4r.jpg",
+        title: "Euonymus Fortunei Emerald'n Gold",
+        description: "Nizek zimzelen grm za pokrivanje tal ali robne zasaditve, z listi v zelenih in zlatih odtenkih."
+      },
+      {
+        url: "/images/optimized/IMG_7093_ohvxva.jpg",
+        additionalUrls: [
+          "https://www.bessicapiante.it/pics/catalogo/juniperus-squamata-blue-dettaglio-015188.jpg",
+          "https://www.bessicapiante.it/pics/catalogo/juniperus-procubens-nana_3.jpg-+-piccola_3.jpg"
+        ],
+        title: "Juniperus Squamata Blue Star",
+        description: "Počasi rastoč modrikast iglavec, zelo priljubljen za skalnjake, gredice in nižje poudarke."
+      },
+      {
+        url: "/images/optimized/IMG_7092_xdw9ao.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/photinia-fraseri-red-dettaglio.jpg"],
+        title: "Photinia Fraseri Red Robin",
+        description: "Hitro rastoča zimzelena fotinija z izrazito rdečimi mladimi poganjki, idealna za žive meje."
+      },
+      {
+        url: "/images/optimized/IMG_7096_ait94q.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/eucalyptus-gunni-azura-det.jpg"],
+        title: "Evkaliptus Gunnii",
+        description: "Dekorativen evkaliptus s srebrno-turkiznimi listi in lepo kompaktno rastjo za sončne lege."
+      },
+      {
+        url: "/images/optimized/IMG_7091_esdmpg.jpg",
+        additionalUrls: ["https://www.bessicapiante.it/pics/catalogo/013916-dettaglio.jpg"],
+        title: "Japonska aukuba Crotonifolia",
+        description: "Zimzelen grm z bleščečimi zelenimi listi z rumenimi pegami, primeren tudi za senčnejše lege."
+      }
+    ]
   },
   {
     id: 5,
